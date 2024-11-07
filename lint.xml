@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+  <!--配置所有Issue的默认优先级-->
+  <issue id="all" severity="warning"/>
+
+  <!--配置指定Issue的优先级-->
+  <issue id="ShowToast" severity="error"/>
+
+  <!-- 关闭未使用资源的提示 -->
+  <issue id="UnusedIds" severity="ignore" />
+  <issue id="UnusedResources" severity="ignore" />
+
+  <!-- 关闭未使用的代码警告 -->
+  <issue id="UnusedDeclaration" severity="ignore" />
+</lint>
