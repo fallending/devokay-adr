@@ -1,0 +1,54 @@
+apply plugin: "com.android.application"
+
+android {
+  compileSdk appTargetSdk
+  defaultConfig {
+    applicationId "com.devokay.scaffold"
+    minSdk appMinSdk
+    targetSdk appTargetSdk
+    versionCode appVersionCode
+    versionName appVersionName
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+    debug {
+      applicationIdSuffix ".debug"
+      manifestPlaceholders = [
+        APP_NAME: "@string/app_name_debug",
+      ]
+    }
+    release {
+      manifestPlaceholders = [
+        APP_NAME: "@string/app_name",
+      ]
+      minifyEnabled true
+      shrinkResources true
+      proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+    }
+  }
+
+  lintOptions {
+    checkReleaseBuilds false
+    abortOnError false
+  }
+
+  buildFeatures {
+    dataBinding true
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+  implementation project(':devokay')
+
+  testImplementation "junit:junit:4.13.2"
+  androidTestImplementation "androidx.test.ext:junit:1.1.3"
+  androidTestImplementation "androidx.test.espresso:espresso-core:3.4.0"
+
+  implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+  implementation "com.google.android.material:material:1.7.0"
+  implementation "androidx.recyclerview:recyclerview:1.2.1"
+
+  implementation "org.slf4j:slf4j-android:1.7.36"
+  implementation "com.sothree.slidinguppanel:library:3.4.0"
+}
