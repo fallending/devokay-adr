@@ -12,6 +12,7 @@ buildscript {
 
     repositories {
         google()
+        jcenter()
         gradlePluginPortal()
         maven { url 'https://jitpack.io' }
 
@@ -25,11 +26,12 @@ buildscript {
 }
 
 allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven { url 'https://jitpack.io' }
-    }
+  repositories {
+    google()
+    jcenter()
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+  }
 }
 
 task clean(type: Delete) {
