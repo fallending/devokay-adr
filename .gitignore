@@ -22,7 +22,6 @@ target
 *.ctxt
 *.ear
 *.iml
-*.jar
 *.keystore
 *.log
 *.nar
