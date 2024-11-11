@@ -14,14 +14,12 @@ buildscript {
       google()
       jcenter()
       gradlePluginPortal()
-      maven { url 'https://jitpack.io' }
 
-      // （可选）添加aliyun maven配置，提升访问速度。
-      // mirror of google()
-      maven { url 'https://maven.aliyun.com/repository/google' }
-      // mirror of central & jcenter
-      maven { url 'https://maven.aliyun.com/repository/public' }
+      maven { url 'https://jitpack.io' }
+      maven { url 'https://maven.aliyun.com/repository/google' } // mirror of google()
+      maven { url 'https://maven.aliyun.com/repository/public' } // mirror of central & jcenter
     }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:7.3.1'
     }
@@ -32,7 +30,10 @@ allprojects {
     google()
     jcenter()
     mavenCentral()
+
     maven { url 'https://jitpack.io' }
+    maven { url 'https://maven.aliyun.com/repository/google' }
+    maven { url 'https://maven.aliyun.com/repository/public' }
   }
 }
 

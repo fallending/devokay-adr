@@ -1,5 +1,9 @@
-apply plugin: "com.android.library"
-apply plugin: "maven-publish"
+plugins {
+  id 'com.android.library'
+  id 'maven-publish'
+}
+
+group='com.devokay.and'
 
 android {
   compileSdk appTargetSdk
@@ -53,6 +57,4 @@ dependencies {
   api "com.squareup.retrofit2:converter-gson:2.9.0"
   api "com.squareup.okhttp3:logging-interceptor:4.10.0"
   api "com.squareup.okhttp3:okhttp:4.10.0"
-
-
 }
