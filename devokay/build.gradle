@@ -5,19 +5,19 @@ plugins {
 //group 'com.github.fallending'
 //version '0.0.10'
 
-//afterEvaluate {
+afterEvaluate {
   publishing {
     publications {
+      // Creates a Maven publication called "release".
       release(MavenPublication) {
-//        from components.release
-
+        from components.release
         groupId = 'com.github.fallending'
         artifactId = 'devokay-and'
-        version = "0.0.9"
+        version = '0.0.9'
       }
     }
   }
-//}
+}
 
 android {
   compileSdk appTargetSdk

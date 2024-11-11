@@ -1,4 +1,4 @@
 jdk:
   - openjdk11
-install:
-  - ./gradlew build :devokay:publishToMavenLocal
+#install:
+#  - ./gradlew build :devokay:publishToMavenLocal
