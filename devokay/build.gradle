@@ -3,10 +3,11 @@ plugins {
   id 'com.android.library'
   id 'maven-publish'
 }
+group = 'com.github.fallending'
 
-project.afterEvaluate {
+afterEvaluate {
   publishing {
-    def versionName = "0.0.5"
+    def versionName = "0.0.9"
 
     publications {
       release(MavenPublication) {
