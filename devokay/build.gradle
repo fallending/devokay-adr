@@ -5,12 +5,14 @@ plugins {
 
 //group='com.github.fallending'
 
-afterEvaluate {
+project.afterEvaluate {
   publishing {
     def versionName = "0.0.5"
 
     publications {
-      mavenJava(MavenPublication) {
+      release(MavenPublication) {
+        from components.release
+
         groupId = 'com.github.fallending'
         artifactId = 'devokay-and'
         version = versionName
@@ -30,6 +32,12 @@ android {
 
   buildFeatures {
     dataBinding true
+  }
+
+  compileOptions {
+    encoding = 'utf-8'
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
   }
 }
 
