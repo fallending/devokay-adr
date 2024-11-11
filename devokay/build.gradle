@@ -2,23 +2,21 @@ plugins {
   id 'com.android.library'
   id 'maven-publish'
 }
-group 'com.github.fallending'
-version '0.0.10'
+//group 'com.github.fallending'
+//version '0.0.10'
 
 //afterEvaluate {
-//  publishing {
-//    def versionName = "0.0.9"
-//
-//    publications {
-//      release(MavenPublication) {
+  publishing {
+    publications {
+      release(MavenPublication) {
 //        from components.release
-//
-//        groupId = 'com.github.fallending'
-//        artifactId = 'devokay-and'
-//        version = versionName
-//      }
-//    }
-//  }
+
+        groupId = 'com.github.fallending'
+        artifactId = 'devokay-and'
+        version = "0.0.9"
+      }
+    }
+  }
 //}
 
 android {
