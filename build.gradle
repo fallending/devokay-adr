@@ -11,14 +11,16 @@ buildscript {
     }
 
     repositories {
-        google()
-        jcenter()
-        gradlePluginPortal()
-        maven { url 'https://jitpack.io' }
+      google()
+      jcenter()
+      gradlePluginPortal()
+      maven { url 'https://jitpack.io' }
 
-        //默认使用 gradlePluginPortal，以便在依赖库有紧急更新时能第一时间获取
-        //如对日常的拉取速度有追求，可考虑使用以下远程仓库（是对 central 的国内同步仓库，存在 1 天左右的时差）
-        //maven { url "https://maven.aliyun.com/repository/public" }
+      // （可选）添加aliyun maven配置，提升访问速度。
+      // mirror of google()
+      maven { url 'https://maven.aliyun.com/repository/google' }
+      // mirror of central & jcenter
+      maven { url 'https://maven.aliyun.com/repository/public' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.3.1'

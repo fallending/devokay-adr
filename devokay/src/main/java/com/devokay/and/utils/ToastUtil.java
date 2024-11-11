@@ -1,5 +1,6 @@
 package com.devokay.and.utils;
 
+import android.util.Log;
 import android.widget.Toast;
 
 public class ToastUtil {

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
-  package="com.devokay.sample">
+  package="com.devokay.example">
 
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
   <application
+    android:name=".ExampleApp"
     android:allowBackup="true"
     android:icon="@drawable/ic_launcher"
     android:label="${APP_NAME}"
@@ -19,7 +20,7 @@
     tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute">
 
     <activity
-      android:name="com.devokay.sample.MainActivity"
+      android:name="com.devokay.example.MainAct"
       android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
@@ -28,10 +29,10 @@
       </intent-filter>
     </activity>
 
-    <service android:name="com.devokay.sample.ui.widget.PlayerService" />
+    <service android:name="com.devokay.example.ui.widget.PlayerService" />
 
     <receiver
-      android:name="com.devokay.sample.domain.message.PlayerReceiver"
+      android:name="com.devokay.example.domain.message.PlayerReceiver"
       android:exported="false"
       tools:ignore="ExportedReceiver">
       <intent-filter>

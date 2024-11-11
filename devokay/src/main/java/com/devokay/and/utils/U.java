@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
 
 import java.lang.reflect.Field;
@@ -19,9 +20,18 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 
 public final class U {
+
+  public static boolean isNul(@Nullable Object object) {
+    return Objects.isNull(object);
+  }
+  public static boolean noNul(@Nullable Object object) {
+    return Objects.nonNull(object);
+  }
+
 
   private static final String PERMISSION_ACTIVITY_CLASS_NAME =
     "com.blankj.utilcode.util.PermissionUtils$PermissionActivity";

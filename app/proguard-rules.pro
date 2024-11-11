@@ -20,8 +20,8 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class com.devokay.sample.data.bean.** { *; }
--keep class com.devokay.sample.data.config.** { *; }
+-keep class com.devokay.example.data.bean.** { *; }
+-keep class com.devokay.example.data.config.** { *; }
 -keep class com.devokay.player.bean.** { *; }
 
 -keep class * implements android.os.Parcelable {

@@ -38,6 +38,10 @@ dependencies {
   androidTestImplementation "androidx.test.ext:junit:1.1.3"
   androidTestImplementation "androidx.test.espresso:espresso-core:3.4.0"
 
+  implementation 'io.github.aliyun-sls:aliyun-log-android-sdk:2.7.0@aar'
+  api 'com.jakewharton.timber:timber:4.7.0'
+  implementation 'com.birbit:android-priority-jobqueue:2.0.1'
+
   api "androidx.appcompat:appcompat:1.5.1"
   api "org.jetbrains:annotations:23.0.0"
   api "androidx.navigation:navigation-runtime:2.5.3"
@@ -49,4 +53,6 @@ dependencies {
   api "com.squareup.retrofit2:converter-gson:2.9.0"
   api "com.squareup.okhttp3:logging-interceptor:4.10.0"
   api "com.squareup.okhttp3:okhttp:4.10.0"
+
+
 }

@@ -5,7 +5,7 @@
   <data>
     <variable
       name="info"
-      type="com.devokay.sample.data.bean.LibraryInfo" />
+      type="com.devokay.example.data.bean.LibraryInfo" />
   </data>
 
   <LinearLayout

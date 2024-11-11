@@ -7,11 +7,11 @@
 
 <!--    <variable-->
 <!--      name="vm"-->
-<!--      type="com.devokay.sample.MainActivity.MainActivityStates" />-->
+<!--      type="com.devokay.sample.MainAct.MainActivityStates" />-->
 
 <!--    <variable-->
 <!--      name="listener"-->
-<!--      type="com.devokay.sample.MainActivity.ListenerHandler" />-->
+<!--      type="com.devokay.sample.MainAct.ListenerHandler" />-->
 
 <!--  </data>-->
 

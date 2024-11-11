@@ -7,11 +7,11 @@
 
 <!--    <variable-->
 <!--      name="click"-->
-<!--      type="com.devokay.sample.ui.page.MainFragment.ClickProxy" />-->
+<!--      type="com.devokay.sample.ui.page.MainFrag.ClickProxy" />-->
 
 <!--    <variable-->
 <!--      name="vm"-->
-<!--      type="com.devokay.sample.ui.page.MainFragment.MainStates" />-->
+<!--      type="com.devokay.sample.ui.page.MainFrag.MainStates" />-->
 
     <variable
       name="adapter"
