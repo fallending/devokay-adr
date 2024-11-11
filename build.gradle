@@ -1,7 +1,7 @@
 buildscript {
     ext {
-        appTargetSdk = 33
-        appMinSdk = 23
+        appTargetSdk = 34
+        appMinSdk = 24
         appVersionCode = 50500
         appVersionName = "5.5.0"
 
