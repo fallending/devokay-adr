@@ -5,6 +5,9 @@ buildscript {
         appVersionCode = 50500
         appVersionName = "5.5.0"
 
+      appEncoding = 'utf-8'
+      appJavaVersion = JavaVersion.VERSION_11
+
         lifecycleVersion = "2.4.1"
         navigationVersion = "2.5.1"
         retrofitVersion = "2.9.0"

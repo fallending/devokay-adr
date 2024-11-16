@@ -4,6 +4,9 @@ import com.devokay.and.Devo;
 import com.devokay.and.ui.page.BaseApp;
 import com.devokay.and.utils.TagUtil;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import timber.log.Timber;
 
 public class ExampleApp
@@ -24,7 +27,8 @@ public class ExampleApp
       "your-project-log-store",
       "your-access-key-id",
       "your-access-key-secret",
-      "com.devokay.example");
+      "com.devokay.example",
+      List.of("tag1", "tag2"));
 
     Timber.tag(TAG()).e("android sls test"); // 使用 timber 打日志
 

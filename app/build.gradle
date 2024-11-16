@@ -33,9 +33,9 @@ android {
   }
 
   compileOptions {
-    encoding = 'utf-8'
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    encoding = appEncoding
+    sourceCompatibility = appJavaVersion
+    targetCompatibility = appJavaVersion
   }
 
   buildFeatures {

@@ -15,6 +15,8 @@ import com.devokay.and.vendors.job.JobMgr;
 import com.devokay.and.vendors.sls.SLSConfig;
 import com.devokay.and.vendors.sls.SLSMgr;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import timber.log.Timber;
@@ -60,12 +62,13 @@ public class Devo {
     }
   }
 
-  public void appendSLSLogger(String endpoint,
-                              String project,
-                              String logStore,
-                              String accessKeyId,
-                              String accessKeySecret,
-                              String topic) {
+  public void appendSLSLogger(@NonNull String endpoint,
+                              @NonNull String project,
+                              @NonNull String logStore,
+                              @NonNull String accessKeyId,
+                              @NonNull String accessKeySecret,
+                              @NonNull String topic,
+                              @Nullable List<String> acceptedTags) {
     if (Objects.isNull(sls)) {
       SLSConfig conf = new SLSConfig(endpoint, project, logStore, accessKeyId, accessKeySecret, topic);
 
@@ -75,7 +78,9 @@ public class Devo {
       Timber.plant(new Timber.Tree() {
         @Override
         protected void log(int priority, @Nullable String tag, @NonNull String message, @Nullable Throwable t) {
-          shared.sls.sendLog(LogU.getLogLevelString(priority), shared.logSid, tag, message);
+          if (acceptedTags != null && acceptedTags.contains(tag)) {
+            shared.sls.sendLog(LogU.getLogLevelString(priority), shared.logSid, tag, message);
+          }
         }
       });
     }

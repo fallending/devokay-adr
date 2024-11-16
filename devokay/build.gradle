@@ -2,8 +2,6 @@ plugins {
   id 'com.android.library'
   id 'maven-publish'
 }
-//group 'com.github.fallending'
-//version '0.0.10'
 
 afterEvaluate {
   publishing {
@@ -13,7 +11,7 @@ afterEvaluate {
         from components.release
         groupId = 'com.github.fallending'
         artifactId = 'devokay-and'
-        version = '0.0.9'
+//        version = '0.0.9'
       }
     }
   }
@@ -33,9 +31,9 @@ android {
   }
 
   compileOptions {
-    encoding = 'utf-8'
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    encoding = appEncoding
+    sourceCompatibility = appJavaVersion
+    targetCompatibility = appJavaVersion
   }
 }
 
