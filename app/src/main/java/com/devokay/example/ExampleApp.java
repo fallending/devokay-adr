@@ -1,13 +1,7 @@
 package com.devokay.example;
 
-import com.devokay.and.Devo;
 import com.devokay.and.ui.page.BaseApp;
 import com.devokay.and.utils.TagUtil;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import timber.log.Timber;
 
 public class ExampleApp
   extends BaseApp // 继承 BaseApp
@@ -17,23 +11,23 @@ public class ExampleApp
   public void onCreate() {
     super.onCreate();
 
-    testSLS();
+//    testSLS();
   }
 
   private void testSLS() {
-    Devo.shared.appendSLSLogger( // 追加 sls 日志
-      "https://cn-shanghai.log.aliyuncs.com",
-      "your-project",
-      "your-project-log-store",
-      "your-access-key-id",
-      "your-access-key-secret",
-      "com.devokay.example",
-      List.of("tag1", "tag2"));
+//    Devo.appendSLSLogger( // 追加 sls 日志
+//      "https://cn-shanghai.log.aliyuncs.com",
+//      "your-project",
+//      "your-project-log-store",
+//      "your-access-key-id",
+//      "your-access-key-secret",
+//      "com.devokay.example",
+//      List.of("tag1", "tag2"));
 
-    Timber.tag(TAG()).e("android sls test"); // 使用 timber 打日志
-
-    Devo.shared.job.async(() -> { // 异步任务
-      Timber.tag(TAG()).e("android sls test 2");
-    }, 3);
+//    Timber.tag(TAG()).e("android sls test"); // 使用 timber 打日志
+//
+//    Devo.job.async(() -> { // 异步任务
+//      Timber.tag(TAG()).e("android sls test 2");
+//    }, 3);
   }
 }

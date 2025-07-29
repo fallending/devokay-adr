@@ -64,5 +64,11 @@ dependencies {
   implementation 'com.github.DSAppTeam:Anchors:v1.1.8'
 
   // 内存泄漏检测工具
-  debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.x'
+  debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.13'
+
+
+  // popup缝合怪
+  api 'com.github.li-xiaojun:XPopup:2.10.0'
+  implementation 'com.google.android.material:material:1.4.0'
+  implementation 'androidx.recyclerview:recyclerview:1.2.1'
 }

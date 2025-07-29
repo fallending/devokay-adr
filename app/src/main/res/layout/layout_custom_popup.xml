@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_centerHorizontal="true"
+  android:orientation="vertical"
+  android:layout_margin="16dp"
+  android:backgroundTint="@color/material_dynamic_primary100"
+  android:background="@android:color/white">
+
+  <!-- 标题 -->
+  <TextView
+    android:id="@+id/popup_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="这是标题"
+    android:textSize="18sp"
+    android:textColor="#333333"
+    android:textStyle="bold"
+    android:paddingBottom="8dp" />
+
+  <!-- 内容 -->
+  <TextView
+    android:id="@+id/popup_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="这里是弹窗内容，可以是多行文本，描述信息等。"
+    android:textSize="14sp"
+    android:textColor="#666666" />
+
+</LinearLayout>
