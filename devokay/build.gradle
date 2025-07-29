@@ -18,10 +18,10 @@ afterEvaluate {
 }
 
 android {
-  compileSdk appTargetSdk
+  compileSdk rootProject.ext.targetSdkVersion
   defaultConfig {
-    minSdk appMinSdk
-    targetSdk appTargetSdk
+    minSdk rootProject.ext.minSdkVersion
+    targetSdk rootProject.ext.targetSdkVersion
 
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
@@ -31,9 +31,9 @@ android {
   }
 
   compileOptions {
-    encoding = appEncoding
-    sourceCompatibility = appJavaVersion
-    targetCompatibility = appJavaVersion
+    encoding = rootProject.ext.appEncoding
+    sourceCompatibility = rootProject.ext.appJavaVersion
+    targetCompatibility = rootProject.ext.appJavaVersion
   }
 }
 
@@ -59,4 +59,10 @@ dependencies {
   api "com.squareup.retrofit2:converter-gson:2.9.0"
   api "com.squareup.okhttp3:logging-interceptor:4.10.0"
   api "com.squareup.okhttp3:okhttp:4.10.0"
+
+  // 启动任务管理框架
+  implementation 'com.github.DSAppTeam:Anchors:v1.1.8'
+
+  // 内存泄漏检测工具
+  debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.x'
 }

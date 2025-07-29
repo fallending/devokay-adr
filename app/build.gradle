@@ -1,13 +1,13 @@
 apply plugin: "com.android.application"
 
 android {
-  compileSdk appTargetSdk
+  compileSdk rootProject.ext.targetSdkVersion
   defaultConfig {
     applicationId "com.devokay.scaffold"
-    minSdk appMinSdk
-    targetSdk appTargetSdk
-    versionCode appVersionCode
-    versionName appVersionName
+    minSdk rootProject.ext.minSdkVersion
+    targetSdk rootProject.ext.targetSdkVersion
+    versionCode rootProject.ext.appVersionCode
+    versionName rootProject.ext.appVersionName
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
@@ -33,9 +33,9 @@ android {
   }
 
   compileOptions {
-    encoding = appEncoding
-    sourceCompatibility = appJavaVersion
-    targetCompatibility = appJavaVersion
+    encoding = rootProject.ext.appEncoding
+    sourceCompatibility = rootProject.ext.appJavaVersion
+    targetCompatibility = rootProject.ext.appJavaVersion
   }
 
   buildFeatures {
