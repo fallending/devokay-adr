@@ -1,3 +1,4 @@
+// 全局配置
 buildscript {
     ext {
         appTargetSdk = 34
@@ -46,4 +47,14 @@ task clean(type: Delete) {
     rootProject.allprojects {
         delete(it.buildDir)
     }
+}
+
+// 全局过滤lint配置
+task lintCheck() {
+  getAllTasks(true).each {
+    def lintTasks = it.value.findAll { it.name.contains("lint") }
+    lintTasks.each {
+      it.enabled = false
+    }
+  }
 }

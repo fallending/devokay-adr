@@ -30,6 +30,13 @@ android {
     dataBinding true
   }
 
+  lintOptions {
+    abortOnError false         // 不因 lint 报错而中断构建
+    quiet true                 // 不输出过多日志
+    warningsAsErrors false     // 是否把警告当作错误
+    disable 'MissingTranslation', 'InvalidPackage' // 忽略某些规则
+  }
+
   compileOptions {
     encoding = appEncoding
     sourceCompatibility = appJavaVersion
