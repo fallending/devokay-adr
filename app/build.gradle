@@ -1,3 +1,5 @@
+// 模块私有配置
+
 apply plugin: "com.android.application"
 
 android {
