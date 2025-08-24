@@ -22,3 +22,12 @@
 
 rootProject.name = "DevokayJitpack"
 include ':app', ':devokay'
+
+//include ':common_sample_api'
+//project(':common_sample_api').projectDir = new File('common_sample/common_sample_api')
+//
+//include ':common_sample_http'
+//project(':common_sample_http').projectDir = new File('common_sample/common_sample_http')
+//
+//include ':common_sample_impl'
+//project(':common_sample_impl').projectDir = new File('common_sample/common_sample_impl')

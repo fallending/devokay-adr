@@ -29,6 +29,8 @@
       </intent-filter>
     </activity>
 
+    <activity android:name=".modules.httpsample.DownloadAct" />
+
     <service android:name="com.devokay.example.ui.widget.PlayerService" />
 
     <receiver

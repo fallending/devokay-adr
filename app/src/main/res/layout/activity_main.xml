@@ -202,9 +202,18 @@
       <Button
         android:id="@+id/btn_test_popup1"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:background="@color/gray"
-        android:text="test popup1"
+        android:text="测试弹窗样式"
+        />
+
+      <Button
+        android:id="@+id/btn_http_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/material_dynamic_neutral_variant90"
+        android:text="测试HTTP下载"
         />
 
 
