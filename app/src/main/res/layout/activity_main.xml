@@ -216,6 +216,23 @@
         android:text="测试HTTP下载"
         />
 
+      <Button
+        android:id="@+id/btn_http_download_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/material_dynamic_neutral_variant90"
+        android:text="测试HTTP下载控制"
+        />
+
+      <Button
+        android:id="@+id/btn_http_download_okio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/material_dynamic_neutral_variant90"
+        android:text="测试HTTP下载（OKIO）"
+        />
 
     </LinearLayout>
   </LinearLayout>

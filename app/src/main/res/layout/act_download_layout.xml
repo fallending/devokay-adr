@@ -5,6 +5,16 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent">
 
+  <TextView
+    android:id="@+id/tv_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="下载测试页面"
+    android:textColor="@android:color/black"
+    android:textSize="20sp"
+    android:gravity="center"
+    android:padding="16dp" />
+
   <EditText
     android:id="@+id/etUrl"
     android:hint="输入下载链接"
@@ -44,4 +54,130 @@
     android:text="速度: 0 KB/s"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"/>
+
+
+
+<!--  新的版本-->
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 下载链接 -->
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="下载链接"
+      android:textColor="@android:color/black" />
+
+    <EditText
+      android:id="@+id/etUrlV2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="例如：https://example.com/file.bin"
+      android:inputType="textUri"
+      android:textColor="@android:color/black"
+      android:textColorHint="@android:color/darker_gray"
+      android:background="@android:drawable/edit_text"
+      android:padding="12dp"
+      android:layout_marginBottom="12dp" />
+
+    <!-- 限速（KB/s） -->
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="限速（KB/s，可选）"
+      android:textColor="@android:color/black" />
+
+    <EditText
+      android:id="@+id/etLimitV2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="留空表示不限速"
+      android:inputType="number"
+      android:textColor="@android:color/black"
+      android:textColorHint="@android:color/darker_gray"
+      android:background="@android:drawable/edit_text"
+      android:padding="12dp"
+      android:layout_marginBottom="16dp" />
+
+    <!-- 操作按钮：开始 / 暂停 / 继续 -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:weightSum="3"
+      android:layout_marginBottom="16dp">
+
+      <Button
+        android:id="@+id/btnStart"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:text="开始"
+        android:textAllCaps="false" />
+
+      <View
+        android:layout_width="8dp"
+        android:layout_height="0dp" />
+
+      <Button
+        android:id="@+id/btnPause"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:text="暂停"
+        android:textAllCaps="false" />
+
+      <View
+        android:layout_width="8dp"
+        android:layout_height="0dp" />
+
+      <Button
+        android:id="@+id/btnResume"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:text="继续"
+        android:textAllCaps="false" />
+    </LinearLayout>
+
+    <!-- 进度条 + 百分比 -->
+    <ProgressBar
+      android:id="@+id/progressBarV2"
+      style="?android:attr/progressBarStyleHorizontal"
+      android:layout_width="match_parent"
+      android:layout_height="8dp"
+      android:max="100"
+      android:progress="0"
+      android:layout_marginBottom="8dp" />
+
+    <TextView
+      android:id="@+id/tvProgressV2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="进度：0%"
+      android:textColor="@android:color/black"
+      android:layout_marginBottom="4dp" />
+
+    <!-- 速度（瞬时/平均） -->
+    <TextView
+      android:id="@+id/tvSpeedV2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="速度：瞬时 0 KB/s   平均 0 KB/s"
+      android:textColor="@android:color/black"
+      android:layout_marginBottom="4dp" />
+
+    <!-- ETA -->
+    <TextView
+      android:id="@+id/tvEta"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="剩余时间：--"
+      android:textColor="@android:color/black" />
+
+  </LinearLayout>
 </LinearLayout>
