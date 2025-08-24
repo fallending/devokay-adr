@@ -29,7 +29,9 @@
       </intent-filter>
     </activity>
 
-    <activity android:name=".modules.httpsample.DownloadAct" />
+    <activity
+      android:name=".modules.httpsample.DownloadAct"
+      android:theme="@style/AppTheme.LightStatusBar"/>
 
     <service android:name="com.devokay.example.ui.widget.PlayerService" />
 
